@@ -9,7 +9,7 @@ const Index = (props) => {
         top.classList.add("topoutro")
         setTimeout(() => {
             window.location.replace('/')
-        }, 3500);
+        }, 0);
     }
 
     // For each post in the array render a Post component
@@ -21,36 +21,35 @@ const Index = (props) => {
                 text-5xl
                 bg-gradient-to-r from-[#5F1114] to-[#F31B26]
                 text-transparent
-                bg-clip-text">
-                    Note-It
+                bg-clip-text p-5">
+                    New Note
             </h2>
-            <Form action="/create" method="post">
-                <input type="text" name="title" placeholder="write title here"/>
-                <textarea className="min-h-[50vh] max-h-auto"
-                type="text" name="content" placeholder="write content here"/>
+            <Form className="m-10" action="/create" method="post">
+                <input 
+                    type="text" name="title" placeholder="write title here"/>
+                <textarea className="min-h-[50vh] max-h-auto p-3 border-none  bg-[#043432] text-[#E7FDFC]"
+                    type="text" name="content" placeholder="write content here"/>
                 <a onClick={handleRedirect}>
                     <motion.button
-                            initial={{ opacity: 0.6 }}
-                            whileHover={{
-                                scale: 1.2,
-                                transition: { duration: 1 },
-                            }}
-                            whileTap={{ scale: 0.9 }}
-                            whileInView={{ opacity: 1 }} className="bg-[#5F1114] text-[#E7FDFC] border-none p-3 m-10">
-                        Create New Note
+                        initial={{ opacity: 0.6 }}
+                        whileHover={{ scale: [null, 1.5, 1.4] }}
+                        transition={{ duration: 0.3 }}
+                        whileTap={{ scale: 0.9 }}
+                        whileInView={{ opacity: 1 }}
+                        className="bg-[#5F1114] text-[#E7FDFC] border-none p-3 m-10">
+                            Create New Note
                     </motion.button>
                 </a>
             </Form>
             <a onClick={handleRedirect}>
                 <motion.button
-                            initial={{ opacity: 0.6 }}
-                            whileHover={{
-                                scale: 1.2,
-                                transition: { duration: 1 },
-                            }}
-                            whileTap={{ scale: 0.9 }}
-                            whileInView={{ opacity: 1 }} className="bg-[#5F1114] text-[#E7FDFC] border-none p-3 m-10">
-                    Back Home
+                    initial={{ opacity: 0.6 }}
+                    whileHover={{ scale: [null, 1.5, 1.4] }}
+                    transition={{ duration: 0.3 }}
+                    whileTap={{ scale: 0.9 }}
+                    whileInView={{ opacity: 1 }}
+                    className="bg-[#5F1114] text-[#E7FDFC] border-none p-3 m-10">
+                        Back Home
                 </motion.button>
             </a>
         </div>

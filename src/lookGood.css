@@ -1,6 +1,6 @@
 @keyframes leftintro {
     0% {
-        transform: translateX(-150%);
+        transform: translateX(-200%);
         animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
     100% {
@@ -90,7 +90,7 @@
   /* Firefox */
   * {
     scrollbar-width: auto;
-    scrollbar-color: #f31b26 #E7FDFC;
+    scrollbar-color: #f31b26 #5F1114;
   }
 
   /* Chrome, Edge, and Safari */
@@ -99,14 +99,14 @@
   }
 
   *::-webkit-scrollbar-track {
-    background: #E7FDFC;
+    background: #5F1114;
   }
 
   *::-webkit-scrollbar-thumb {
     background-color: #f31b26;
     border-radius: 0px;
     border: 3px solid #f31b26;
-  }
+  } 
 
 .textarea {
     border: none;
@@ -120,6 +120,10 @@
     user-select: none; /* Modern browsers */
     pointer-events: none;
     cursor: default;
+}
+
+.welcome {
+    margin-top: 30vh;
 }
 
 .bottombutton {
@@ -146,7 +150,7 @@
 }
 
 .rightoutro {
-    animation: rightoutro 2s linear 1.5s 1 normal forwards;
+    animation: rightoutro 2s linear 1 normal forwards;
     display: flex;
     flex-direction: column;
 }
@@ -165,10 +169,16 @@
 
 .topintro {
     transform: translateY(-150%);
-    animation: topintro 2s linear 1.5s 1 normal forwards;
+    animation: topintro 2s linear 1 normal forwards;
 }
 
 .topoutro {
     transform: translateY(+150%);
     animation: topoutro 2s linear 1 normal forwards;
+}
+
+input[type] {
+    border-color: #E7FDFC;
+    background-color: #043432;
+    color: #E7FDFC;
 }
