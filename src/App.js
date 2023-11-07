@@ -7,20 +7,20 @@ function App() {
   const { pathname } = useLocation();
   const pageVariants = {
     initial: {
-      opacity: 0
+      opacity: 1
     },
     in: {
       opacity: 1
     },
     out: {
-      opacity: 0
+      opacity: 1
     }
   };
 
   const pageTransition = {
     type: 'tween',
     ease: 'linear',
-    duration: 0.5
+    duration: 2
   }; 
 
   return (

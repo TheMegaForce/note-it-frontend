@@ -19,7 +19,7 @@ const Index = (props) => {
         bottom.classList.add("bottomoutro")
         setTimeout(() => {
             window.location.replace('/new')
-        }, 3000);
+        }, 3500);
     }
 
     return <>

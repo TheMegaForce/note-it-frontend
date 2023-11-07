@@ -20,6 +20,28 @@
     }
 }
 
+@keyframes rightintro {
+    0% {
+        transform: translateX(+150%);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+    100% {
+        transform: translateX(0);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+}
+
+@keyframes rightoutro {
+    0% {
+        transform: translateX(0);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    100% {
+        transform: translateX(+150%);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
 @keyframes bottomintro {
     0% {
       transform: translateY(+150%);
@@ -38,6 +60,28 @@
     }
     100% {
         transform: translateY(+150%);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+
+@keyframes topintro {
+    0% {
+      transform: translateY(-150%);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+    100% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+}
+
+@keyframes topoutro {
+    0% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    100% {
+        transform: translateY(-150%);
         animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     }
 }
@@ -78,6 +122,10 @@
     cursor: default;
 }
 
+.bottombutton {
+    margin-top: auto;
+}
+
 .leftintro {
     animation: leftintro 2s linear 1 normal forwards;
     display: flex;
@@ -90,9 +138,19 @@
     flex-direction: column;
 }
 
-.bottombutton {
-    margin-top: auto;
+
+.rightintro {
+    animation: rightintro 2s linear 1 normal forwards;
+    display: flex;
+    flex-direction: column;
 }
+
+.rightoutro {
+    animation: rightoutro 2s linear 1.5s 1 normal forwards;
+    display: flex;
+    flex-direction: column;
+}
+
 
 .bottomintro {
     transform: translateY(+150%);
@@ -102,4 +160,15 @@
 .bottomoutro {
     transform: translateY(-150%);
     animation: bottomoutro 2s linear 1 normal forwards;
+}
+
+
+.topintro {
+    transform: translateY(-150%);
+    animation: topintro 2s linear 1.5s 1 normal forwards;
+}
+
+.topoutro {
+    transform: translateY(+150%);
+    animation: topoutro 2s linear 1 normal forwards;
 }
