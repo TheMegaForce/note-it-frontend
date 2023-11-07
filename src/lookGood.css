@@ -1,0 +1,64 @@
+@keyframes leftintro {
+    0% {
+        transform: translateX(-150%);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+    100% {
+        transform: translateX(0);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+}
+
+@keyframes bottomintro {
+    0% {
+      transform: translateY(+150%);
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+    100% {
+      transform: translateY(0);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+}
+
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: auto;
+    scrollbar-color: #f31b26 #E7FDFC;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #E7FDFC;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #f31b26;
+    border-radius: 0px;
+    border: 3px solid #f31b26;
+  }
+
+.textarea {
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+.leftintro {
+    animation: leftintro 2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.bottombutton {
+    margin-top: auto;
+}
+
+.bottomintro {
+    transform: translateY(+150%);
+    animation: bottomintro 2s linear 1.5s 1 normal forwards;
+}
