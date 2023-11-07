@@ -22,7 +22,7 @@ Table of Contents
 
 <!--About the Project-->
 # Note-It
-![Project 4 Deployed Frontend Preview](<README-IMAGES\Screenshot 2023-11-07 135243.png>)
+![Project 4 Deployed Frontend Preview](<README-IMAGES/Screenshot 2023-11-07 135243.png>)
 
 Note-It was created as a simple user-friendly app that allows users to create notes.
 
@@ -45,7 +45,7 @@ Open application via <a href="#deployed-sites">Deployed Sites</a> in another bro
 ![**Project 4 ERD**](<README-IMAGES/Screenshot 2023-10-31 165204.png>)
 
 ### Wireframes
-![**Project 4 wireframes**](<README-IMAGES\Screenshot 2023-11-07 140716.png>)
+![**Project 4 wireframes**](<README-IMAGES/Screenshot 2023-11-07 140716.png>)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
