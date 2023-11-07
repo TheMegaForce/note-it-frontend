@@ -10,6 +10,9 @@ const Index = (props) => {
             <textarea className="" type="text" name="content" placeholder="write content here"/>
             <button>Create New Note</button>
         </Form>
+        <a href="/">
+            <button>Back Home</button>
+        </a>
     </div>
     </>;
 };

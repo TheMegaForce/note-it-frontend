@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 //destructure the post from props
 const Post = ({ post }) => {
@@ -12,12 +13,23 @@ const Post = ({ post }) => {
     padding: "1em",
   };
   return (
-    <div style={div} className="col-span-2 rounded-[12px] text-[#E7FDFC]">
+    <motion.div
+    style={div}
+    drag
+    dragConstraints={{
+        top: -20,
+        right: 20,
+        bottom: 20,
+        left: -20,
+    }}
+    dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
+    dragElastic={0.5}
+    whileTap={{ cursor: "grabbing" }} className="col-span-2 rounded-[12px] text-[#E7FDFC]">
       <Link to={`/post/${post.id}`}>
         <h1>{post.title}</h1>
       </Link>
-      <textarea readOnly className="textarea">{post.content}</textarea>
-    </div>
+      <textarea unselectable="true" readOnly className="textarea">{post.content}</textarea>
+    </motion.div>
   );
 };
 

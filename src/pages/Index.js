@@ -1,5 +1,6 @@
 import Post from "../components/Post";
 import {useLoaderData} from "react-router-dom"
+import { motion } from "framer-motion";
 
 const Index = (props) => {
     const notes = useLoaderData()
@@ -23,7 +24,19 @@ const Index = (props) => {
                 p-3 m-3
                 ">Note-It</h1>
                 <div className="bottombutton">
-                    <button className="bg-[#5F1114] text-[#E7FDFC] border-none p-3 m-10">Create New Note</button>
+                    <a href="/new">
+                        <motion.button
+                            initial={{ opacity: 0.6 }}
+                            whileHover={{
+                                scale: 1.2,
+                                transition: { duration: 1 },
+                            }}
+                            whileTap={{ scale: 0.9 }}
+                            whileInView={{ opacity: 1 }}
+                            className="bg-[#5F1114] text-[#E7FDFC] border-none p-3 m-10">
+                                Create New Note
+                        </motion.button>
+                    </a>
                 </div>
             </div>
             <div className="bottomintro overflow-auto m-5 w-auto">

@@ -46,6 +46,14 @@
     border: none;
     outline: none;
     resize: none;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari, Chrome, Opera, Samsung */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Edge, IE */
+    user-select: none; /* Modern browsers */
+    pointer-events: none;
+    cursor: default;
 }
 
 .leftintro {
