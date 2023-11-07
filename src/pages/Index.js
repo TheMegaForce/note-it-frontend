@@ -10,11 +10,23 @@ const Index = (props) => {
         background: "#043432",
     };
 
+    function handleRedirect() {
+        const left = document.getElementById("left")
+        left.classList.remove("leftintro")
+        left.classList.add("leftoutro")
+        const bottom = document.getElementById("bottom")
+        bottom.classList.remove("bottomintro")
+        bottom.classList.add("bottomoutro")
+        setTimeout(() => {
+            window.location.replace('/new')
+        }, 3000);
+    }
+
     return <>
         <div className="
         grid grid-cols-[200px_auto] grid-rows-[100vh] bg-[#021817]
         ">
-            <div style={div} className="leftintro flex-auto w-30 border-none rounded-[12px] m-5">
+            <div id="left" style={div} className="leftintro flex-auto w-30 border-none rounded-[12px] m-5">
                 <h1 className="
                 font-medium
                 text-5xl
@@ -24,7 +36,7 @@ const Index = (props) => {
                 p-3 m-3
                 ">Note-It</h1>
                 <div className="bottombutton">
-                    <a href="/new">
+                    <a onClick={handleRedirect}>
                         <motion.button
                             initial={{ opacity: 0.6 }}
                             whileHover={{
@@ -39,7 +51,7 @@ const Index = (props) => {
                     </a>
                 </div>
             </div>
-            <div className="bottomintro overflow-auto m-5 w-auto">
+            <div id="bottom" className="bottomintro overflow-auto m-5 w-auto">
                 {notes.map((post) => <Post post={post} key={post.id} />)}
             </div>
         </div>
