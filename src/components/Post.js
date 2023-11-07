@@ -9,7 +9,7 @@ const Post = ({ post }) => {
     const y = useMotionValue(200);
 
     const rotateX = useTransform(y, [0, 400], [30, -30]);
-    const rotateY = useTransform(x, [0, 1200], [-30, 30]);
+    const rotateY = useTransform(x, [0, 1500], [-30, 30]);
 
     function handleMouse(event) {
         const rect = event.currentTarget.getBoundingClientRect();
@@ -69,7 +69,7 @@ const Post = ({ post }) => {
                                 {post.title}
                         </motion.h1>
                     </a>
-                    <textarea unselectable="true" readOnly className="textarea">{post.content}</textarea>
+                    <textarea unselectable="true" readOnly className="list_container textarea text-left px-5">{post.content}</textarea>
             </motion.div>
         </motion.div>
     );

@@ -38,15 +38,15 @@ const Index = (props) => {
                 style={div}
                 id="left" className="leftintro flex-auto w-30 border-none rounded-[12px] m-5">
                     <h1 className="
-                        font-medium
+                        font-bold
                         text-5xl
-                        bg-gradient-to-r from-[#5F1114] to-[#F31B26]
+                        bg-[#F31B26]
                         text-transparent
                         bg-clip-text
                         p-3 m-3">
                             Note-It
                     </h1>
-                    <h1 className="welcome">
+                    <h1 className="welcome text-[#E7FDFC] font-medium">
                         Welcome!
                     </h1>
                     <div className="bottombutton">

@@ -34,7 +34,7 @@ const Show = () => {
                     <h2 className="
                         font-medium
                         text-5xl
-                        bg-gradient-to-r from-[#5F1114] to-[#F31B26]
+                        bg-[#F31B26]
                         text-transparent
                         bg-clip-text p-5">
                             "{post.title}" Notes

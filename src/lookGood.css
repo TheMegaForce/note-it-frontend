@@ -108,6 +108,15 @@
     border: 3px solid #f31b26;
   } 
 
+.list_container {
+    direction: rtl;
+    overflow:auto;
+}
+
+.item_direction {
+    direction: ltr;
+}
+
 .textarea {
     border: none;
     outline: none;
