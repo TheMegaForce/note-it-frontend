@@ -58,7 +58,7 @@ const Post = ({ post }) => {
                 dragTransition={{ bounceStiffness: 600, bounceDamping: 20 }}
                 dragElastic={0.5}
                 whileTap={{ cursor: "grabbing" }}
-                className="col-span-2 rounded-[12px] text-[#E7FDFC]">
+                className="col-span-2 rounded-[12px] text-[#E7FDFC] border border-10 border-solid border-[#021817]">
                     <a onClick={handleRedirect}>
                         <motion.h1 
                             initial={{ opacity: 0.6 }}
